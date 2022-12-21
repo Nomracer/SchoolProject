@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://Nomracer:<password>@cluster0.ms8gvc5.mongodb.net
 }).then(console.log('connect to mongo db!'))
 
 app.listen(3000,function(){
-    console.log("server is running on http://localhost:3000")
+    console.log("server is running on http://localhost:3000 ")
 
 
 })
