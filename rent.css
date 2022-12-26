@@ -1,0 +1,25 @@
+:root{
+    --blue: #181D31;
+    --green: #678983;
+    --bej: #E6DDC4;
+    --difbej: #F0E9D2;
+
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+}  
+
+
+body{
+    background-color: var(--difbej);
+
+}
+
+nav{
+
+    background-color:var(--blue);
+}
