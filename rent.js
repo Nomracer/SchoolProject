@@ -1,13 +1,12 @@
 function myFunction() {
   var x = document.getElementById("navbar");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
+  //bu güzel tiriktir bunu kulan
+  x.classList.toggle('responsive')
 }
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+
+
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js'
+// analitics sadece google ads sistemi kullanacaksan gerekli diğer türlü sisteme yük olur kullanma
 
 const firebaseConfig = {
   apiKey: "AIzaSyBdxWH1ur8psaS6LQw9dwjOcwpY1Rv8ZY8",
@@ -21,4 +20,3 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
