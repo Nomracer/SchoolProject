@@ -5,8 +5,8 @@ body {
 #scrollUp {
   bottom: 20px;
   right: 20px;
-  width: 38px; /* Width of image */
-  height: 38px; /* Height of image */
+  width: 38px;
+  height: 38px;
   background: url(../images/top.png) no-repeat;
 }
 
@@ -84,7 +84,6 @@ body {
 }
 
 .navbar-default .navbar-brand {
-	background-image:url("../images/logo.png");
 	background-repeat: no-repeat;
 	width: 200px;
 	height: 60px;
@@ -93,7 +92,6 @@ body {
 
 @media screen and (max-width: 991px) {
 .navbar-default .navbar-brand {
-	background-image:url("../images/small-logo.png");
 	background-repeat: no-repeat;
 	width: 160px;
 	height: 60px;
@@ -133,7 +131,7 @@ body {
 	background-image:url("../images/l.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: bottom center;
+	background-position: center center;
 	width: 100%;
     height: 100%;
 }
@@ -217,8 +215,6 @@ body {
 	background: #000;
 	color: #fff;
 }
-
-/* Font size change on browser resize */
 
 @media screen and (max-width: 991px) {
 .banner .opacity_overlay .info h2 {
@@ -351,8 +347,6 @@ body {
 	padding-left: 0px;
 }
 }
-
-/* Font size change on browser resize */
 
 @media screen and (max-width: 991px) {
 .services h2 {
@@ -798,7 +792,7 @@ body {
 /* End of Homepage */
 
 
-/* ------- Services Page ------- */
+/* ------- Car Services Page ------- */
 
 @media screen and (max-width: 500px) {
 .pricing-table .col-sm-4 {
