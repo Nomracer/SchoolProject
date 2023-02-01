@@ -9,59 +9,6 @@ body {
   height: 38px;
   background: url(../images/top.png) no-repeat;
 }
-
-.top-heading {
-	background: #000;
-	width: 100%;
-	color: #fff; 
-}
-
-.top-heading .contact-info {
-	padding-top: 8px;
-}
-
-.top-heading .contact-info a {
-	font-size: 14px;
-	font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-	color: #fff;
-	text-decoration: none;
-}
-
-@media screen and (max-width: 500px) {
-.top-heading .contact-info a {
-	font-size: 12px;
-}
-}
-
-.top-heading .contact-info span {
-	padding-right: 5px;
-}
-
-.top-heading .social-icons {
-	list-style: none;
-	padding-top: 8px;
-}
-
-.top-heading .social-icons li {
-	display: inline-block;
-}
-
-.top-heading .social-icons .icon {
-	font-size: 20px;
-	padding-left: 10px;
-	color: #fff;
-	text-shadow: 1px 1px #fff;
-	text-decoration: none;
-}
-
-@media screen and (max-width: 500px) {
-.top-heading .social-icons .icon {
-	font-size: 16px;
-}
-}
-
-
 .navbar-default .navbar-nav li a {
     text-transform: uppercase;
     text-decoration: none;

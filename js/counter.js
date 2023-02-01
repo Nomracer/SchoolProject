@@ -11,8 +11,7 @@
 	$.fn.countTo = function (options) {
 		options = options || {};
 
-		return $(this).each(function () {
-			// set options for current element
+		return $(this).each(function () { 
 			var settings = $.extend({}, $.fn.countTo.defaults, {
 				from:            $(this).data('from'),
 				to:              $(this).data('to'),
