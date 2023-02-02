@@ -365,7 +365,7 @@ body {
 /* Homepage */
 
 .banner {
-	background-image: url("../images/l.jpg");
+	background-image: url("../images/banner.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;

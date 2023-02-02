@@ -3,289 +3,331 @@
 
 <head>
 
-    <title>Cars</title>
-    
-    <meta charset="utf-8" />
+	<title>Cars</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/sidebar.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	
+
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-	
+
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-	
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jPushMenu.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    
-    <script type="text/javascript">
-		$(window).load(function() {
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jPushMenu.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+
+	<script type="text/javascript">
+		$(window).load(function () {
 			$(".loader").fadeOut("slow");
 		})
 	</script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
 
 	<div class="loader"></div>
-	
+
 	<style>
-	
-	.loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
-	}
-	
+		.loader {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+		}
 	</style>
-	
+
 	<header>
-        <nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                        <a class="navbar-brand" href="index.html"></a>
-                </div>
+		<nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"></a>
+				</div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
+					id="bs-example-navbar-collapse-1">
 
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sub.html">Car Subscription Services</a></li>
-                        <li><a href="cars.html"><span>Cars</span></a></li>
-                        <li><a href="sign-in.html">Sign in</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <style>
-        
-        	.navbar-default {
-        		background: #F5F5F5;
-        	}
-        
-        	.navbar-default .navbar-nav li a {
-        		color: #000;
-        	}
-        	
-        	.navbar-default .navbar-toggle .icon-bar {
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="sub.html">Car Subscription Services</a></li>
+						<li><a href="cars.html"><span>Cars</span></a></li>
+						<li><a href="sign-in.html">Sign in</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<style>
+			.navbar-default {
+				background: #F5F5F5;
+			}
+
+			.navbar-default .navbar-nav li a {
+				color: #000;
+			}
+
+			.navbar-default .navbar-toggle .icon-bar {
 				background: #000;
 			}
-			
+
 			.navbar-nav {
 				float: right;
 			}
-			
-			@media screen and (max-width: 768px) {
-			.navbar-nav {
-				float: left;
-			}
-			}
-			
-        
-        </style>
 
-        
-    </header>
-    
-    
-    <div class="container">
-    	<ul class="breadcrumb">
-  			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
-  			<li class="active">Cars</li>
+			@media screen and (max-width: 768px) {
+				.navbar-nav {
+					float: left;
+				}
+			}
+		</style>
+
+
+	</header>
+
+
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+			<li class="active">Cars</li>
 		</ul>
 	</div>
-	
+
 	<div class="about-info">
 		<div class="container">
 			<div class="col-md-6">
 				<div class="image">
-					<img src="images/about-us.jpg" class="img-responsive">
+					<img src="images/letsdeal.jpg" class="img-responsive">
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="text">
-					<h3>About Us</h3>
-					<p>Lorem ipsum dolor sit amet, ei qui suscipit salutatus, ex sed sint suavitate. Cu vel vivendum facilisi intellegam, te quo mazim doctus ocurreret, no mei iusto vituperata. Eam mutat paulo nullam ea, ea partem iisque labores vim, ei est eripuit deserunt percipitur. Nec et vitae efficiantur, at ius nobis neglegentur. Mei vidit convenire ad, convenire comprehensam vel ne.</p>
-					<p>Sit vide deleniti an, no mel justo putent. Te sea aperiam constituam, mea ex nihil ocurreret referrentur. Ei cum novum alienum reformidans, mel appareat referrentur id. Has ne tale repudiare philosophia. Vim at quas decore, ex nec ponderum adolescens inciderint.</p>
+					<h3>Lets Deal!</h3>
+					<p>Lorem ipsum dolor sit amet, ei qui suscipit salutatus, ex sed sint suavitate. Cu vel vivendum
+						facilisi intellegam, te quo mazim doctus ocurreret, no mei iusto vituperata. Eam mutat paulo
+						nullam ea, ea partem iisque labores vim, ei est eripuit deserunt percipitur. Nec et vitae
+						efficiantur, at ius nobis neglegentur. Mei vidit convenire ad, convenire comprehensam vel ne.
+					</p>
+					<p>Sit vide deleniti an, no mel justo putent. Te sea aperiam constituam, mea ex nihil ocurreret
+						referrentur. Ei cum novum alienum reformidans, mel appareat referrentur id. Has ne tale
+						repudiare philosophia. Vim at quas decore, ex nec ponderum adolescens inciderint.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="team">
-  		<div class="container">
-    		<div class="row">
-      			<div class="col-md-10 col-md-offset-1">
-        			<div class="col-lg-12">
-          				<h6 class="description">OUR TEAM</h6>
-          				<div class="row pt-md">
-            				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-              					<div class="img-box">
-                					<img src="images/placeholder.png" class="img-responsive">
-                					<ul class="text-center">
-                  						<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-                					</ul>
-              					</div>
-              					<h1>John Doe</h1>
-              					<h2>CEO and Founder</h2>
-              					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            				</div>
-            				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-              					<div class="img-box">
-                					<img src="images/placeholder.png" class="img-responsive">
-                					<ul class="text-center">
-                  						<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-                 						<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-                					</ul>
-              					</div>
-              					<h1>Chris Doe</h1>
-              					<h2>Co-founder</h2>
-              					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            				</div>
-            				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-              					<div class="img-box">
-                					<img src="images/placeholder.png" class="img-responsive">
-                					<ul class="text-center">
-                  						<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-                					</ul>
-              					</div>
-              					<h1>Jack Doe</h1>
-              					<h2>Co-founder/ Marketing</h2>
-              					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            				</div>
-            				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-              					<div class="img-box">
-                					<img src="images/placeholder.png" class="img-responsive">
-                					<ul class="text-center">
-                  						<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-                					</ul>
-              					</div>
-              					<h1>Nancy Doe</h1>
-              					<h2>Designer</h2>
-              					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            				</div>
-           	 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-              					<div class="img-box">
-                					<img src="images/placeholder.png" class="img-responsive">
-                					<ul class="text-center">
-                  						<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-                					</ul>
-              					</div>
-              					<h1>James John</h1>
-              					<h2>Web Developer</h2>
-              					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            				</div>
-            				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-              					<div class="img-box">
-                					<img src="images/placeholder.png" class="img-responsive">
-                					<ul class="text-center">
-                  						<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-                  						<a href="#"><li><i class="fa fa-linkedin"></i></li></a>
-                					</ul>
-              					</div>
-              					<h1>Daniel John</h1>
-              					<h2>Fullstack Developer</h2>
-              					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            				</div>
-        				</div>
-      				</div>
-    			</div>
-  			</div>
-	</div>
-	
-	<footer class="footer">
 		<div class="container">
-			<div class="col-md-4 col-sm-6">
-				<h3>Contrast</h3>
-				<hr>
-				<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper laoreet suscipiantur.</p>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<h3>About Us</h3>
-				<hr>
-				<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam, purto iudico vix et, eu est alia dicant perpetua.</p>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<h3>Contact Info</h3>
-				<hr>
-				<ul class="contact-list">
-					<li>
-						<p>
-							<i class="fa fa-home"></i>
-							Trafalgar Square, Westminster, London WC2N 5DN
-						</p>
-						<p>
-							<i class="fa fa-phone"></i>
-							0800 240 0905
-						</p>
-						<p>
-							<i class="fa fa-envelope-o"></i>
-							support@yourdomain.com
-						</p>
-					</li>
-				</ul>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-lg-12">
+						<h6 class="description">OUR CARS</h6>
+						<div class="row pt-md">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car1.jpg" class="img-responsive">
+									<ul class="text-center">
+										<a href="#">
+											<li><i class="fa fa-shopping-cart"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-bookmark"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-check"></i></li>
+										</a>
+									</ul>
+								</div>
+								<h1>Mustang</h1>
+								<h2>Sports</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car2.jpg" class="img-responsive">
+									<ul class="text-center">
+										<a href="#">
+											<li><i class="fa fa-shopping-cart"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-bookmark"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-linkedin"></i></li>
+										</a>
+									</ul>
+								</div>
+								<h1>Tesla Roadster</h1>
+								<h2>Sport Car</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car3.webp" class="img-responsive">
+									<ul class="text-center">
+										<a href="#">
+											<li><i class="fa fa-shopping-cart"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-bookmark"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-linkedin"></i></li>
+										</a>
+									</ul>
+								</div>
+								<h1>Honda</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car4.jpg" class="img-responsive">
+									<ul class="text-center">
+										<a href="#">
+											<li><i class="fa fa-shopping-cart"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-bookmark"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-linkedin"></i></li>
+										</a>
+									</ul>
+								</div>
+								<h1>2019 Mazda CX-5</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car5.png" class="img-responsive">
+									<ul class="text-center">
+										<a href="#">
+											<li><i class="fa fa-shopping-cart"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-bookmark"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-linkedin"></i></li>
+										</a>
+									</ul>
+								</div>
+								<h1>2023 KIA SORENTO</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car6.jpg" class="img-responsive">
+									<ul class="text-center">
+										<a href="#">
+											<li><i class="fa fa-shopping-cart"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-bookmark"></i></li>
+										</a>
+										<a href="#">
+											<li><i class="fa fa-linkedin"></i></li>
+										</a>
+									</ul>
+								</div>
+								<h1>Fiat</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</footer>
-    
-    
-    <script type="text/javascript">
-    
-      $(document).ready(function(){
-        $('.toggle-menu').jPushMenu({closeOnClickLink: false});
-        $('.dropdown-toggle').dropdown();
-      });
-      
-    </script>
-    
-    
-    <script type="text/javascript">
-    
-    $(function () {
-  		$.scrollUp({
-    		scrollName: 'scrollUp', // Element ID
-    		topDistance: '300', // Distance from top before showing element (px)
-    		topSpeed: 600, // Speed back to top (ms)
-    		animation: 'fade', // Fade, slide, none
-    		animationInSpeed: 200, // Animation in speed (ms)
-    		animationOutSpeed: 200, // Animation out speed (ms)
-    		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-    		scrollImg: true,
-  		});
-	});
-    
-    </script>
-    
+
+		<footer class="footer">
+			<div class="container">
+				<div class="col-md-4 col-sm-6">
+					<h3>Contrast</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At
+						alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper
+						laoreet suscipiantur.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>About Us</h3>
+					<hr>
+					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam,
+						purto iudico vix et, eu est alia dicant perpetua.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Contact Info</h3>
+					<hr>
+					<ul class="contact-list">
+						<li>
+							<p>
+								<i class="fa fa-home"></i>
+								Trafalgar Square, Westminster, London WC2N 5DN
+							</p>
+							<p>
+								<i class="fa fa-phone"></i>
+								0800 240 0905
+							</p>
+							<p>
+								<i class="fa fa-envelope-o"></i>
+								support@yourdomain.com
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+
+		<script type="text/javascript">
+
+			$(document).ready(function () {
+				$('.toggle-menu').jPushMenu({ closeOnClickLink: false });
+				$('.dropdown-toggle').dropdown();
+			});
+
+		</script>
+
+
+		<script type="text/javascript">
+
+			$(function () {
+				$.scrollUp({
+					scrollName: 'scrollUp', // Element ID
+					topDistance: '300', // Distance from top before showing element (px)
+					topSpeed: 600, // Speed back to top (ms)
+					animation: 'fade', // Fade, slide, none
+					animationInSpeed: 200, // Animation in speed (ms)
+					animationOutSpeed: 200, // Animation out speed (ms)
+					activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+					scrollImg: true,
+				});
+			});
+
+		</script>
+
 
 </body>
 
