@@ -71,7 +71,7 @@
 						<li><a href="sub.html">Car Subscription Services</a></li>
 						<li><a href="cars.html"><span>Cars</span></a></li>
 						<li><a href="sign-in.html">Sign Up</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html">Rent</a></li>
 					</ul>
 				</div>
 			</div>
@@ -142,15 +142,13 @@
 								<div class="img-box">
 									<img src="images/car1.jpg" class="img-responsive">
 									<ul class="text-center">
-										<a id="mustang" href="#">
-											<li><i class="fa fa-shopping-cart"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-bookmark"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-check"></i></li>
-										</a>
+										<li id="mustang"><i class="fa fa-shopping-cart"></i></li>
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+
+										<li><i class="fa fa-check"></i></li>
+
 									</ul>
 								</div>
 								<h1>Mustang</h1>
@@ -161,15 +159,15 @@
 								<div class="img-box">
 									<img src="images/car2.jpg" class="img-responsive">
 									<ul class="text-center">
-										<a href="#">
-											<li><i class="fa fa-shopping-cart"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-bookmark"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-check"></i></li>
-										</a>
+
+										<li><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+
+										<li><i class="fa fa-check"></i></li>
+
 									</ul>
 								</div>
 								<h1>Tesla Roadster</h1>
@@ -180,15 +178,15 @@
 								<div class="img-box">
 									<img src="images/car3.webp" class="img-responsive">
 									<ul class="text-center">
-										<a href="#">
-											<li><i class="fa fa-shopping-cart"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-bookmark"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-check"></i></li>
-										</a>
+
+										<li><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+
+										<li><i class="fa fa-check"></i></li>
+
 									</ul>
 								</div>
 								<h1>Honda</h1>
@@ -199,15 +197,14 @@
 								<div class="img-box">
 									<img src="images/car4.jpg" class="img-responsive">
 									<ul class="text-center">
-										<a href="#">
-											<li><i class="fa fa-shopping-cart"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-bookmark"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-check"></i></li>
-										</a>
+
+										<li><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
 									</ul>
 								</div>
 								<h1>2019 Mazda CX-5</h1>
@@ -218,15 +215,14 @@
 								<div class="img-box">
 									<img src="images/car5.png" class="img-responsive">
 									<ul class="text-center">
-										<a href="#">
-											<li><i class="fa fa-shopping-cart"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-bookmark"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-check"></i></li>
-										</a>
+
+										<li><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
 									</ul>
 								</div>
 								<h1>2023 KIA SORENTO</h1>
@@ -237,15 +233,14 @@
 								<div class="img-box">
 									<img src="images/car6.jpg" class="img-responsive">
 									<ul class="text-center">
-										<a href="#">
-											<li><i class="fa fa-shopping-cart"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-bookmark"></i></li>
-										</a>
-										<a href="#">
-											<li><i class="fa fa-check"></i></li>
-										</a>
+
+										<li><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
 									</ul>
 								</div>
 								<h1>Fiat</h1>
@@ -306,6 +301,63 @@
 
 		</script>
 
+		<script type="module">
+
+
+   // Import the functions you need from the SDKs you need
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+        import { getDatabase, update, set, ref, push, child, onValue, get, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+        import { getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup, signInWithRedirect, getRedirectResult, GoogleAuthProvider, TwitterAuthProvider } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB6A4sYc9oPAbM8C41cIMdpUkVs7eskobM",
+            authDomain: "officialnomrent.firebaseapp.com",
+            databaseURL: "https://officialnomrent-default-rtdb.europe-west1.firebasedatabase.app/",
+            projectId: "officialnomrent",
+            storageBucket: "officialnomrent.appspot.com",
+            messagingSenderId: "10425662484",
+            appId: "1:10425662484:web:1370d81c65fcd2808cfb01",
+            measurementId: "G-NPGFHN12WG"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+
+		
+			onValue(dbRef, (snapshot) => {
+            snapshot.forEach((childSnapshot) => {
+                const childKey = childSnapshot.key;
+                const childData = childSnapshot.val();
+                const carList = document.getElementById("cars");
+
+                    carList.innerHTML +=`
+					  <tr>
+        <td>
+        <img src="${childData.url}" class="img-fluid img-thumbnail">
+        </td> 
+        <td>${childData.title}</td>
+        <td>${childData.price}</td>
+        <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
+    </tr>    `
+
+ 
+
+
+                    console.log(childData.price + childData. url + childData.title);
+            });
+        }, {
+            onlyOnce: true
+        });
+
+		</script>
+
 
 		<script type="text/javascript">
 
@@ -322,9 +374,11 @@
 				});
 			});
 
+			mustang.addEventListener('click', (e) => {
+				window.location.href = "contact.html";
+			})
+
 		</script>
-
-
 </body>
 
 </html>
