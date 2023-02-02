@@ -33,6 +33,7 @@ body {
 	position: relative;
 	justify-content: center;
 	overflow: hidden;
+	margin-bottom: 250px;
 }
 
 .form-structor::after {
