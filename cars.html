@@ -142,7 +142,7 @@
 								<div class="img-box">
 									<img src="images/car1.jpg" class="img-responsive">
 									<ul class="text-center">
-										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
+										<li onclick="location.href='contact.html'";><i class="fa fa-shopping-cart"></i></li>
 
 										<li><i class="fa fa-bookmark"></i></li>
 
@@ -326,10 +326,7 @@
             measurementId: "G-NPGFHN12WG"
         };
 
-		rentCar.addEventListener('click', (e) => {
-				location.href = "contact.html";
-			})
-
+	
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
