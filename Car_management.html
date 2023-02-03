@@ -95,26 +95,28 @@
             @media screen and (max-width: 768px) {
                 .navbar-nav {
                     float: left;
-				    top: 0px;
-				    margin-bottom: 200px;
+                    top: 0px;
+                    margin-bottom: 200px;
 
                 }
             }
-            input::placeholder{
-            color: #000;
-             
+
+            input::placeholder {
+                color: #000;
+
             }
         </style>
 
 
     </header>
 
+<p>https://www.inwheeltime.com/wp-content/uploads/2019/04/3-300x350.jpeg</p>
     <div class="container">
-		<ul class="breadcrumb">
-			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
-			<li class="active">Adminastor</li>
-		</ul>
-	</div>
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+            <li class="active">Adminastor</li>
+        </ul>
+    </div>
 
     <div class="carmanagement">
 
@@ -123,10 +125,12 @@
         <input type="text" placeholder="Category" id="category">
         <input type="text" placeholder="Description For Car" id="description">
         <input type="text" placeholder="Car URL" id="carsurl">
-        <button id="btnAdd">Add Car</button>
-        <button id="btnGet">Get Car</button>
-        <button id="btnDelete">Delete</button>
-        <button id="btnUpdate">Update</button>
+        <div class="adminbuttons">
+            <button id="btnAdd">Add Car</button>
+            <button id="btnGet">Get Car</button>
+            <button id="btnDelete">Delete</button>
+            <button id="btnUpdate">Update</button>
+        </div>
 
 
 
@@ -186,7 +190,7 @@
 
             });
 
-            alert('Session created.');
+            alert('Car Added.');
 
         });
 
@@ -211,7 +215,7 @@
 
             })
 
-            alert('Successfuly got datas')
+            alert('Successfuly Got Car Data')
         });
 
         btnUpdate.addEventListener('click', (e) => {
