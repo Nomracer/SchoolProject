@@ -344,8 +344,8 @@
 									<img src="${childData.CarURL}" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart"></i></li>
-
+										<li ><i class="fa fa-shopping-cart" id="rentCar"></i></li>
+										
 
 										<li><i class="fa fa-bookmark"></i></li>
 
@@ -367,6 +367,10 @@
             onlyOnce: true
         });
 
+		rentCar.addEventListener('click', (e) => {
+				location.href = "contact.html";
+			})
+
 		</script>
 
 
@@ -385,10 +389,7 @@
 				});
 			});
 
-			mustang.addEventListener('click', (e) => {
-				window.location.href = "contact.html";
-			})
-
+			
 		</script>
 </body>
 
