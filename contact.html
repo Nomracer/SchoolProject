@@ -22,6 +22,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jPushMenu.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js%22%3E"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js%22%3E"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js%22%3E"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
     
     <script type="text/javascript">
 		$(window).load(function() {
@@ -112,6 +117,41 @@
   			<li class="active">Contact</li>
 		</ul>
 	</div>
+
+	<div class="carRentContainer">
+        <div class="pickUpdiv">
+
+            <div class="pickupchild">
+                <label for="">Pick Up Location</label>
+                <select name="pickUpLocation" id="pickUpLocation">
+                    <option value="">Select</option>
+                    <option value="Mersin">Mersin</option>
+                    <option value="Adana">Adana</option>
+                    <option value="Antalya">Antalya</option>
+                </select>
+
+            </div>
+
+            <div class="pickupchild">
+                <label for="">Pick Up and Drop Up Date</label>
+                <input type="text" name="dates" id="pickup_date">
+            </div>
+
+
+
+            <div class="pickupchild">
+                <label for="">Drop Up Location</label>
+                <select name="returnLocation" id="returnLocation">
+                    <option value="">Select</option>
+                    <option value="Mersin">Mersin</option>
+                    <option value="Adana">Adana</option>
+                    <option value="Antalya">Istanbul</option>
+                </select>
+
+            </div>
+
+
+
 
 	<div class="contact">
 		<div class="container">
@@ -209,5 +249,7 @@
     
 
 </body>
+
+<script src="js/datetime.js"></script>
 
 </html>
