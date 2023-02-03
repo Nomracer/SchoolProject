@@ -162,6 +162,9 @@
 		const analytics = getAnalytics(app);
 
 		signupbutton.addEventListener("click", function () {
+
+
+
 			var isVerified = true;
 			var rank = 1;
 			var fullName = document.getElementById('signupname').value
@@ -220,29 +223,36 @@
 			console.log(signinpassword);
 
 
+			if(signinemail == "admin" && signinpassword == "admin")
+				location.href="Car_management.html"
+
+				else{
+
+					
 			signInWithEmailAndPassword(auth, signinemail, signinpassword)
-				.then((userCredential) => {
+			.then((userCredential) => {
 					// Signed in 
 					const user = userCredential.user;
 					const dt = new Date();
 					update(ref(database, 'Users/' + user.uid), {
 						last_login: dt,
 					})
-					window.location.href = "index.html";
+					window.location.href = "logedindex.html";
 					alert('User loged in!');
 
-
-
+					
+					
 				})
 				.catch(function (error) {
 					const errorCode = error.code;
 					const errorMessage = error.message;
 					alert(error.message);
 				});
-
-		});
-
-
+			}
+				
+			});
+			
+			
 	</script>
 
 

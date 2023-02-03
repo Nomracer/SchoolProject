@@ -137,7 +137,7 @@
 				<div class="col-md-10 col-md-offset-1">
 					<div class="col-lg-12">
 						<h6 class="description">OUR CARS</h6>
-						<div class="row pt-md">
+						<div class="row pt-md" id="allCars">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
 								<div class="img-box">
 									<img src="images/car1.jpg" class="img-responsive">
@@ -329,28 +329,39 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const database = getDatabase(app);
+		const dbRef = ref(database, 'Cars/');
 
-		
+
 			onValue(dbRef, (snapshot) => {
             snapshot.forEach((childSnapshot) => {
                 const childKey = childSnapshot.key;
                 const childData = childSnapshot.val();
-                const carList = document.getElementById("cars");
+                const carList = document.getElementById("allCars");
 
                     carList.innerHTML +=`
-					  <tr>
-        <td>
-        <img src="${childData.url}" class="img-fluid img-thumbnail">
-        </td> 
-        <td>${childData.title}</td>
-        <td>${childData.price}</td>
-        <td><a href="#" id = "delete-car" class = "btn btn-danger">Aracı Sil</a></td>
-    </tr>    `
+					 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="${childData.CarURL}" class="img-responsive">
+									<ul class="text-center">
+
+										<li><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>${childData.CarName}</h1>
+								<h2>${childData.CarCategoryType}</h2>
+								<p>${childData.CarDescription}</p>
+							</div>   `
 
  
 
 
-                    console.log(childData.price + childData. url + childData.title);
+                    //console.log(childData.price + childData. url + childData.title);
             });
         }, {
             onlyOnce: true
