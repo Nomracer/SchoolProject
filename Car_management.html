@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Cars</title>
+    <title>Adminastor Managament</title>
 
     <meta charset="utf-8" />
 
@@ -80,6 +80,8 @@
         <style>
             .navbar-default {
                 background: #ffffff;
+                margin-bottom: 50px;
+                display: flex;
             }
 
             .navbar-default .navbar-nav li a {
@@ -93,6 +95,9 @@
             @media screen and (max-width: 768px) {
                 .navbar-nav {
                     float: left;
+				    top: 0px;
+				    margin-bottom: 200px;
+
                 }
             }
             input::placeholder{
@@ -104,13 +109,20 @@
 
     </header>
 
+    <div class="container">
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+			<li class="active">Adminastor</li>
+		</ul>
+	</div>
+
     <div class="carmanagement">
 
-        <input type="text" placeholder="car ID" id="carID">
-        <input type="text" placeholder="Car Image Name" id="carname">
+        <input type="text" placeholder="Car ID" id="carID">
+        <input type="text" placeholder="Car Name" id="carname">
         <input type="text" placeholder="Category" id="category">
-        <input type="text" placeholder="description" id="description">
-        <input type="text" placeholder="carsurl" id="carsurl">
+        <input type="text" placeholder="Description For Car" id="description">
+        <input type="text" placeholder="Car URL" id="carsurl">
         <button id="btnAdd">Add Car</button>
         <button id="btnGet">Get Car</button>
         <button id="btnDelete">Delete</button>
@@ -217,7 +229,7 @@
                 CarCategoryType: category
 
             })
-            alert('Veriler güncellendi');
+            alert('Data Updated');
         });
 
     </script>

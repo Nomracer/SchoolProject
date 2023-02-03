@@ -142,7 +142,7 @@
 								<div class="img-box">
 									<img src="images/car1.jpg" class="img-responsive">
 									<ul class="text-center">
-										<li id="mustang"><i class="fa fa-shopping-cart"></i></li>
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
 
 										<li><i class="fa fa-bookmark"></i></li>
 
@@ -160,7 +160,7 @@
 									<img src="images/car2.jpg" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart"></i></li>
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
 
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -179,7 +179,7 @@
 									<img src="images/car3.webp" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart"></i></li>
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
 
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -198,7 +198,7 @@
 									<img src="images/car4.jpg" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart"></i></li>
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
 
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -216,7 +216,7 @@
 									<img src="images/car5.png" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart"></i></li>
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
 
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -234,7 +234,7 @@
 									<img src="images/car6.jpg" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart"></i></li>
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
 
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -275,15 +275,16 @@
 						<li>
 							<p>
 								<i class="fa fa-home"></i>
-								Trafalgar Square, Westminster, London WC2N 5DN
+								İstemihan Talay Caddesi, Inova butik No:2
+							Yenişehir/Mersin
 							</p>
 							<p>
 								<i class="fa fa-phone"></i>
-								0800 240 0905
+								0534 534 34 34
 							</p>
 							<p>
 								<i class="fa fa-envelope-o"></i>
-								support@yourdomain.com
+								nomracerr@gmail.com
 							</p>
 						</li>
 					</ul>
@@ -325,6 +326,10 @@
             measurementId: "G-NPGFHN12WG"
         };
 
+		rentCar.addEventListener('click', (e) => {
+				location.href = "contact.html";
+			})
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
@@ -344,7 +349,7 @@
 									<img src="${childData.CarURL}" class="img-responsive">
 									<ul class="text-center">
 
-										<li ><i class="fa fa-shopping-cart" id="rentCar"></i></li>
+										<li><i class="fa fa-shopping-cart" id="rentCar"></i></li>
 										
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -367,9 +372,6 @@
             onlyOnce: true
         });
 
-		rentCar.addEventListener('click', (e) => {
-				location.href = "contact.html";
-			})
 
 		</script>
 

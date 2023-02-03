@@ -1344,7 +1344,7 @@ body {
 /* End of Company */
 
 
-/* ------- Clients Page ------- */
+/* ------- Page  4------- */
 
 @media screen and (max-width: 500px) {
 	.client-overview .col-sm-6 {
@@ -1417,7 +1417,7 @@ body {
 /* End of Clients */
 
 
-/* ------- Contact Page ------- */
+/* ------- Rent Page ------- */
 
 
 .contact {
@@ -1494,8 +1494,11 @@ body {
 	}
 }
 
+.carmanagement{
+	margin-bottom: 900px;
 
-/* End of Contact */
+}
+/* End of Rent */
 
 
 /* ------- Footer Section ------- */
@@ -1505,6 +1508,7 @@ body {
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background: #1a1a1a;
+	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -1534,21 +1538,4 @@ body {
 
 .footer .contact-list i {
 	margin-right: 10px;
-}
-
-.copyright-part {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background: #000;
-}
-
-.copyright-part p {
-	text-align: center;
-	color: #999;
-	font-size: 13px;
-	font-family: 'Montserrat', sans-serif;
-}
-
-.copyright-part p span {
-	color: #ccc;
 }
