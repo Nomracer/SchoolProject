@@ -1418,48 +1418,6 @@ body {
 
 
 /* ------- Rent Page ------- */
-/* 
-  .carRentContainer {
-            display: flex;
-            flex-direction: column;
-            padding: 2.8%;
-            font-size: 16px;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .carRentContainer option,
-        .carRentContainer select {
-            font-size: 16px;
-        }
-
-        .pickUpdiv {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-
-            width: 90%;
-            height: 120px;
-            background-color: #c4dfaa6b;
-        }
-
-        .pickupchild {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-
-        }
-
-        .pickupchild input,
-        .pickupchild select {
-            height: 5rem;
-            width: 25rem;
-            padding-left: 10px;
-            border-radius: 5px;
-            border: solid green 1px;
-            text-align: center;
-        }
-*/
 
 .carRentContainer {
 	display: flex;
@@ -1618,11 +1576,6 @@ body {
 
 .footer .contact-list i {
 	margin-right: 10px;
-}
-
-.carmanagement{
-
-
 }
 
 .adminbuttons{
