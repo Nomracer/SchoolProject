@@ -1,22 +1,7 @@
-$(function () {
-    $('input[name="dates"]').daterangepicker({
-        opens: 'center'
-    }, function (start, end, label) {
-        var carPrice = document.getElementById('pricetag').textContent;
-        console.log(carPrice)
-        var days = new Date(end - start),
-            totalDay = Math.floor(days / 1000 / 60 / 60 / 24);
-        document.getElementById('daysRange').innerText = totalDay;
-        if (carCount > 0) {
-
-            var priceNotDiscount = totalDay * carPrice;
-            document.getElementById('priceNotDiscount').innerText = priceNotDiscount;
-            priceFinal = priceNotDiscount * 80 / 100;
-        }
-        else {
-            priceFinal = totalDay * carPrice;
-        }
-        document.getElementById('priceFinal').innerText = priceFinal;
-        console.log(totalDay);
+$(function() {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'left'
+    }, function(start, end, label) {
+      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
-});
+  });

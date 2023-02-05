@@ -127,7 +127,7 @@
 				<div class="form-holder">
 					<input id="signinemail" type="email" class="input" placeholder="Email" />
 					<input id="signinpassword" type="password" class="input" placeholder="Password" />
-					<button class="text-center">Forgot Password?</button>
+					<button id="forgotpass" class="input text-center">Forgot Password?</button>
 				</div>
 				<button id="signinlogin" class="submit-btn">Log in</button>
 			</div>
@@ -162,9 +162,20 @@
 		const database = getDatabase(app);
 		const analytics = getAnalytics(app);
 
+		forgotpass.addEventListener("click", function () {
+			var email = document.getElementById('signinemail').value
+			sendPasswordResetEmail(auth, email)
+				.then(() => {
+					alert("Email password reset sent!")
+				})
+				.catch((error) => {
+					const errorCode = error.code;
+					const errorMessage = error.message;
+					alert('Please Enter a valid email address!'  + errorMessage);
+					// ..
+				});
+		});
 		signupbutton.addEventListener("click", function () {
-
-
 
 			var isVerified = true;
 			var rank = 1;
@@ -224,36 +235,36 @@
 			console.log(signinpassword);
 
 
-			if(signinemail == "admin" && signinpassword == "admin")
-				location.href="Car_management.html"
+			if (signinemail == "admin" && signinpassword == "admin")
+				location.href = "Car_management.html"
 
-				else{
+			else {
 
-					
-			signInWithEmailAndPassword(auth, signinemail, signinpassword)
-			.then((userCredential) => {
-					// Signed in 
-					const user = userCredential.user;
-					const dt = new Date();
-					update(ref(database, 'Users/' + user.uid), {
-						last_login: dt,
+
+				signInWithEmailAndPassword(auth, signinemail, signinpassword)
+					.then((userCredential) => {
+						// Signed in 
+						const user = userCredential.user;
+						const dt = new Date();
+						update(ref(database, 'Users/' + user.uid), {
+							last_login: dt,
+						})
+						window.location.href = "logedindex.html";
+						alert('User loged in!');
+
+
+
 					})
-					window.location.href = "logedindex.html";
-					alert('User loged in!');
-
-					
-					
-				})
-				.catch(function (error) {
-					const errorCode = error.code;
-					const errorMessage = error.message;
-					alert(error.message);
-				});
+					.catch(function (error) {
+						const errorCode = error.code;
+						const errorMessage = error.message;
+						alert(error.message);
+					});
 			}
-				
-			});
-			
-			
+
+		});
+
+
 	</script>
 
 

@@ -1,263 +1,357 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
 
-    <title>Rent</title>
-    
-    <meta charset="utf-8" />
+	<title>Rent</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/sidebar.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	
+
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-	
+
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-	
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jPushMenu.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-	
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jPushMenu.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js%22%3E"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js%22%3E"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js%22%3E"></script>
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
-    
-    <script type="text/javascript">
-		$(window).load(function() {
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js%22%3E"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<script type="text/javascript">
+		$(window).load(function () {
 			$(".loader").fadeOut("slow");
 		})
 	</script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
 
 	<div class="loader"></div>
-	
+
 	<style>
-	
-	.loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
-	}
-	
+		.loader {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+		}
 	</style>
-	
+
 	<header>
-        <nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                        <a class="navbar-brand" href="index.html"></a>
-                </div>
+		<nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"></a>
+				</div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="bs-example-navbar-collapse-1">
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
+					id="bs-example-navbar-collapse-1">
 
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sub.html">Car Subscription Services</a></li>
-                        <li><a href="cars.html">Cars</a></li>
-                        <li><a href="sign-in.html">Sign Up</a></li>
-                        <li><a href="contact.html"><span>Rent</a></span></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <style>
-            .navbar-default {
-                background: #ffffff;
-                margin-bottom: 50px;
-                display: flex;
-            }
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="sub.html">Car Subscription Services</a></li>
+						<li><a href="cars.html">Cars</a></li>
+						<li><a href="sign-in.html">Sign Up</a></li>
+						<li><a href="contact.html"><span>Rent</a></span></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-            .navbar-default .navbar-nav li a {
-                color: #000;
-            }
+		<style>
+			.navbar-default {
+				background: #ffffff;
+				margin-bottom: 50px;
+				display: flex;
+			}
 
-            .navbar-default .navbar-toggle .icon-bar {
-                background: #000;
-            }
+			.navbar-default .navbar-nav li a {
+				color: #000;
+			}
 
-            @media screen and (max-width: 768px) {
-                .navbar-nav {
-                    float: left;
-                    top: 0px;
-                    margin-bottom: 200px;
+			.navbar-default .navbar-toggle .icon-bar {
+				background: #000;
+			}
 
-                }
-            }
+			@media screen and (max-width: 768px) {
+				.navbar-nav {
+					float: left;
+					top: 0px;
+					margin-bottom: 200px;
 
-            input::placeholder {
-                color: #000;
+				}
+			}
 
-            }
-        </style>
+			input::placeholder {
+				color: #000;
 
-        
-    </header>
-    
-    
-    <div class="container">
-    	<ul class="breadcrumb">
-  			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
-  			<li class="active">Rent</li>
+			}
+		</style>
+
+
+	</header>
+
+
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+			<li class="active">Rent</li>
 		</ul>
 	</div>
 
 	<div class="carRentContainer">
-        <div class="pickUpdiv">
+		<div class="pickUpdiv">
 
-            <div class="pickupchild">
-                <label for="">Pick Up Location</label>
-                <select name="pickUpLocation" id="pickUpLocation">
-                    <option value="">Select</option>
-                    <option value="Mersin">Mersin</option>
-                    <option value="Adana">Adana</option>
-                    <option value="Antalya">Antalya</option>
-                </select>
+			<div class="pickupchild">
+				<label for="">Pick Up Location</label>
+				<select name="pickUpLocation" id="pickUpLocation">
+					<option value="">Select</option>
+					<option value="Mersin">Mersin</option>
+					<option value="Adana">Adana</option>
+					<option value="Antalya">Antalya</option>
+				</select>
 
-            </div>
+			</div>
 
-            <div class="pickupchild">
-                <label for="">Pick Up and Drop Up Date</label>
-                <input type="text" name="dates" id="pickup_date">
-            </div>
+			<input type="text" name="daterange" value="06/02/2023 - 06/02/2023"/>
 
 
 
-            <div class="pickupchild">
-                <label for="">Drop Up Location</label>
-                <select name="returnLocation" id="returnLocation">
-                    <option value="">Select</option>
-                    <option value="Mersin">Mersin</option>
-                    <option value="Adana">Adana</option>
-                    <option value="Antalya">Istanbul</option>
-                </select>
+			<div class="pickupchild">
+				<label for="">Drop Up Location</label>
+				<select name="returnLocation" id="returnLocation">
+					<option value="">Select</option>
+					<option value="Mersin">Mersin</option>
+					<option value="Adana">Adana</option>
+					<option value="Antalya">Istanbul</option>
+				</select>
 
-            </div>
+			</div>
 		</div>
 
 
 
 
-	<div class="contact">
-		<div class="container">
-			<div class="col-md-8">
-				<div class="contact-form">
-					<h3>Rent Form</h3>
-					<hr>
-					<form action="#" method="post">
-						<input id="name" name="name" type="text" placeholder="Full Name" required>
-						<input id="email" name="email" type="text" placeholder="Email" required>
-						<input id="subject" name="subject" type="text" placeholder="TC Identity No" required>
-						<textarea id="message" name="message" placeholder="Your Message"></textarea>
-						<button name="submit" id="submit" type="submit">Pay!</button>
-					</form>
+		<div class="contact">
+			<div class="container">
+				<div class="col-md-8">
+					<div class="contact-form">
+						<h3>Rent Form</h3>
+						<hr>
+						<form action="#" method="post">
+							<input id="name" name="name" type="text" placeholder="Full Name" required>
+							<input id="email" name="email" type="text" placeholder="Email" required>
+							<input id="subject" name="subject" type="text" placeholder="TC Identity No" required>
+							<textarea id="message" name="message" placeholder="Your Message"></textarea>
+							<button name="submit" id="submit" type="submit">Pay!</button>
+						</form>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="contact-info">
-					<h3>Car Info</h3>
-					<div>
+				<div class="col-md-4">
+					<div id="gotburaq" class="contact-info">
+						<!--<h3>Car Info</h3>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+							<div style="width: 260px;" class="img-box">
+								<img src="images/car2.jpg" class="img-responsive">
+							</div>
+							<div style="width: 300px;" class="text-center">
+
+
+								<h2>Tesla Roadster</p>
+								<p>Sport Car</p>
+							</div>
+						</div>
+						<hr> -->
 
 					</div>
-					<hr>
-					<p>If you ran into any troblue while paying, please contact me.</p>
-					<p><strong>Mail:</strong> nomracerr@gmail.com</p>
-					<p><strong>Phone:</strong> +90 534 534 53 34</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	
 
-	<footer class="footer">
-		<div class="container">
-			<div class="col-md-4 col-sm-6">
-				<h3>Contrast</h3>
-				<hr>
-				<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper laoreet suscipiantur.</p>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="col-md-4 col-sm-6">
+					<h3>Contrast</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At
+						alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper
+						laoreet suscipiantur.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>About Us</h3>
+					<hr>
+					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam,
+						purto iudico vix et, eu est alia dicant perpetua.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Contact Info</h3>
+					<hr>
+					<ul class="contact-list">
+						<li>
+							<p>
+								<i class="fa fa-home"></i>
+								Mersin, Mersin No:2
+								Mersin
+							</p>
+							<p>
+								<i class="fa fa-phone"></i>
+								0534 534 53 34
+							</p>
+							<p>
+								<i class="fa fa-envelope-o"></i>
+								nomracerr@gmail.com
+							</p>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-md-4 col-sm-6">
-				<h3>About Us</h3>
-				<hr>
-				<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam, purto iudico vix et, eu est alia dicant perpetua.</p>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<h3>Contact Info</h3>
-				<hr>
-				<ul class="contact-list">
-					<li>
-						<p>
-							<i class="fa fa-home"></i>
-							Mersin, Mersin No:2
-							Mersin
-						</p>
-						<p>
-							<i class="fa fa-phone"></i>
-							0534 534 53 34
-						</p>
-						<p>
-							<i class="fa fa-envelope-o"></i>
-							nomracerr@gmail.com
-						</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-    
-    
-    <script type="text/javascript">
-    
-      $(document).ready(function(){
-        $('.toggle-menu').jPushMenu({closeOnClickLink: false});
-        $('.dropdown-toggle').dropdown();
-      });
-      
-    </script>
-    
-    
-    <script type="text/javascript">
-    
-    $(function () {
-  		$.scrollUp({
-    		scrollName: 'scrollUp', // Element ID
-    		topDistance: '300', // Distance from top before showing element (px)
-    		topSpeed: 600, // Speed back to top (ms)
-    		animation: 'fade', // Fade, slide, none
-    		animationInSpeed: 200, // Animation in speed (ms)
-    		animationOutSpeed: 200, // Animation out speed (ms)
-    		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-    		scrollImg: true,
-  		});
-	});
-    
-    </script>
-    
+		</footer>
+
+
+		<script type="text/javascript">
+
+			$(document).ready(function () {
+				$('.toggle-menu').jPushMenu({ closeOnClickLink: false });
+				$('.dropdown-toggle').dropdown();
+			});
+
+		</script>
+
+
+		<script type="module">
+
+
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+			import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+			import { getDatabase, update, set, ref, push, child, onValue, get, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+			import { getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup, signInWithRedirect, getRedirectResult, GoogleAuthProvider, TwitterAuthProvider } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+				apiKey: "AIzaSyB6A4sYc9oPAbM8C41cIMdpUkVs7eskobM",
+				authDomain: "officialnomrent.firebaseapp.com",
+				databaseURL: "https://officialnomrent-default-rtdb.europe-west1.firebasedatabase.app/",
+				projectId: "officialnomrent",
+				storageBucket: "officialnomrent.appspot.com",
+				messagingSenderId: "10425662484",
+				appId: "1:10425662484:web:1370d81c65fcd2808cfb01",
+				measurementId: "G-NPGFHN12WG"
+			};
+
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const auth = getAuth(app);
+			const database = getDatabase(app);
+			const dbRef = ref(database, 'Cars/');
+
+
+			var idCar = window.localStorage.getItem("carid");
+			window.onload = getCars();
+			function getCars() {
+
+				const starCountRef = ref(database, 'Cars/' + idCar);
+
+
+				onValue(starCountRef, (snapshot) => {
+					const childKey = snapshot.key;
+					const childData = snapshot.val();
+					const carList = document.getElementById("gotburaq");
+					carList.innerHTML += `
+							<h3>Car Info</h3>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+							<div style="width: 260px;" class="img-box">
+								<img src="${childData.CarURL}" class="img-responsive">
+							</div>
+							<div style="width: 300px;" class="text-center">
+
+
+								<h2>${childData.CarName}</h2>
+								<p>${childData.CarCategoryType}</p>
+							</div>
+						</div>
+						<hr>
+							`
+
+
+				});
+
+			}
+		</script>
+
+		<!--<script>
+			$(function () {
+				$('input[name="dates"]').daterangepicker({
+					opens: 'center'
+				}, function (start, end, label) {
+					var carPrice = document.getElementById('pricetag').textContent;
+					console.log(carPrice)
+					var days = new Date(end - start),
+						totalDay = Math.floor(days / 1000 / 60 / 60 / 24);
+					document.getElementById('daysRange').innerText = totalDay;
+					if (carCount > 0) {
+
+						var priceNotDiscount = totalDay * carPrice;
+						document.getElementById('priceNotDiscount').innerText = priceNotDiscount;
+						priceFinal = priceNotDiscount * 80 / 100;
+					}
+					else {
+						priceFinal = totalDay * carPrice;
+					}
+					document.getElementById('priceFinal').innerText = priceFinal;
+					console.log(totalDay);
+				});
+			});
+		</script>-->
+		<script type="text/javascript">
+
+			$(function () {
+				$.scrollUp({
+					scrollName: 'scrollUp', // Element ID
+					topDistance: '300', // Distance from top before showing element (px)
+					topSpeed: 600, // Speed back to top (ms)
+					animation: 'fade', // Fade, slide, none
+					animationInSpeed: 200, // Animation in speed (ms)
+					animationOutSpeed: 200, // Animation out speed (ms)
+					activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+					scrollImg: true,
+				});
+			});
+
+		</script>
+
 
 </body>
-
-<script src="js/datetime.js"></script>
+<script type="module" src="js/datetime.js"></script>
 
 </html>

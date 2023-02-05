@@ -141,7 +141,8 @@
 								<div class="img-box">
 									<img src="images/car1.jpg" class="img-responsive">
 									<ul class="text-center">
-										<li onclick="location.href='contact.html'";><i class="fa fa-shopping-cart"></i></li>
+										<li onclick="location.href='contact.html'" ;><i class="fa fa-shopping-cart"></i>
+										</li>
 
 										<li><i class="fa fa-bookmark"></i></li>
 
@@ -257,12 +258,15 @@
 				<div class="col-md-4 col-sm-6">
 					<h3>Contrast</h3>
 					<hr>
-					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper laoreet suscipiantur.</p>
+					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At
+						alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper
+						laoreet suscipiantur.</p>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<h3>About Us</h3>
 					<hr>
-					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam, purto iudico vix et, eu est alia dicant perpetua.</p>
+					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam,
+						purto iudico vix et, eu est alia dicant perpetua.</p>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<h3>Contact Info</h3>
@@ -301,48 +305,48 @@
 		<script type="module">
 
 
-   // Import the functions you need from the SDKs you need
-   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
-        import { getDatabase, update, set, ref, push, child, onValue, get, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
-        import { getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup, signInWithRedirect, getRedirectResult, GoogleAuthProvider, TwitterAuthProvider } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+			import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+			import { getDatabase, update, set, ref, push, child, onValue, get, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+			import { getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup, signInWithRedirect, getRedirectResult, GoogleAuthProvider, TwitterAuthProvider } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyB6A4sYc9oPAbM8C41cIMdpUkVs7eskobM",
-            authDomain: "officialnomrent.firebaseapp.com",
-            databaseURL: "https://officialnomrent-default-rtdb.europe-west1.firebasedatabase.app/",
-            projectId: "officialnomrent",
-            storageBucket: "officialnomrent.appspot.com",
-            messagingSenderId: "10425662484",
-            appId: "1:10425662484:web:1370d81c65fcd2808cfb01",
-            measurementId: "G-NPGFHN12WG"
-        };
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+				apiKey: "AIzaSyB6A4sYc9oPAbM8C41cIMdpUkVs7eskobM",
+				authDomain: "officialnomrent.firebaseapp.com",
+				databaseURL: "https://officialnomrent-default-rtdb.europe-west1.firebasedatabase.app/",
+				projectId: "officialnomrent",
+				storageBucket: "officialnomrent.appspot.com",
+				messagingSenderId: "10425662484",
+				appId: "1:10425662484:web:1370d81c65fcd2808cfb01",
+				measurementId: "G-NPGFHN12WG"
+			};
 
-	
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const database = getDatabase(app);
-		const dbRef = ref(database, 'Cars/');
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const auth = getAuth(app);
+			const database = getDatabase(app);
+			const dbRef = ref(database, 'Cars/');
 
 
 			onValue(dbRef, (snapshot) => {
-            snapshot.forEach((childSnapshot) => {
-                const childKey = childSnapshot.key;
-                const childData = childSnapshot.val();
-                const carList = document.getElementById("allCars");
+				snapshot.forEach((childSnapshot) => {
+					const childKey = childSnapshot.key;
+					const childData = childSnapshot.val();
+					const carList = document.getElementById("allCars");
 
-                    carList.innerHTML +=`
+					carList.innerHTML += `
 					 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
 								<div class="img-box">
 									<img src="${childData.CarURL}" class="img-responsive">
 									<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart" id="rentCar"></i></li>
+										<li><i class="fa fa-shopping-cart" id="rentCar" data-carid="${childKey}"></i></li>
 										
 
 										<li><i class="fa fa-bookmark"></i></li>
@@ -356,17 +360,27 @@
 								<p>${childData.CarDescription}</p>
 							</div>   `
 
- 
+					
 
 
-                    //console.log(childData.price + childData. url + childData.title);
-            });
-        }, {
-            onlyOnce: true
-        });
 
+					//console.log(childData.price + childData. url + childData.title);
+				});
+			}, {
+				onlyOnce: true
+			});
 
+			$("body").on("click", "#rentCar", function () {
+
+				var $keyCar = $(this).data("carid");
+				window.localStorage.setItem("carid", $keyCar);
+
+				console.log($keyCar)
+				location.href = 'contact.html';
+
+			});
 		</script>
+
 
 
 		<script type="text/javascript">
@@ -384,7 +398,7 @@
 				});
 			});
 
-			
+
 		</script>
 </body>
 
