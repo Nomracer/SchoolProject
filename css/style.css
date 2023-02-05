@@ -493,6 +493,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+	.slider {
+		font-size: 10px;
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 768px) {
 	.banner .opacity_overlay .secondary_layer .msg {
 		font-size: 16px;
 	}
@@ -714,7 +721,6 @@ body {
 	margin-top: 40px;
 }
 
-/* Section Left */
 
 .projects .news .section-left:before {
 	content: "";
@@ -768,9 +774,6 @@ body {
 		margin-top: 40px;
 	}
 }
-
-
-/* Section Right */
 
 .projects .news .section-right:before {
 	content: "";
@@ -1015,31 +1018,23 @@ body {
 }
 
 ::-webkit-input-placeholder {
-	/* WebKit, Blink, Edge */
 	color: #fff;
 }
 
 :-moz-placeholder {
-	/* Mozilla Firefox 4 to 18 */
 	color: #fff;
 	opacity: 1;
 }
 
 ::-moz-placeholder {
-	/* Mozilla Firefox 19+ */
 	color: #fff;
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	/* Internet Explorer 10-11 */
 	color: #fff;
 }
 
-/* End of Homepage */
-
-
-/* ------- Car Services Page ------- */
 
 @media screen and (max-width: 500px) {
 	.pricing-table .col-sm-4 {
@@ -1190,11 +1185,6 @@ body {
 	font-size: 15px;
 	color: #777;
 }
-
-/* End of Servies */
-
-
-/* ------- Company Page ------- */
 
 @media screen and (max-width: 500px) {
 	.about-info .col-md-6 {
